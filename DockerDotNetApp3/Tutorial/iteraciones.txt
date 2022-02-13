@@ -1,0 +1,25 @@
+﻿
+curso 
+https://www.youtube.com/watch?v=8WO-WlZ9NoA
+https://www.youtube.com/watch?v=bLVVj-3_wlA
+
+
+EXPOSE 80
+EXPOSE 5024
+
+dotnet restore
+dotnet publish -c Release -o out
+dotnet out/DockerDotNetApp.dll
+
+https://hub.docker.com/_/microsoft-dotnet-sdk
+no ejecutar
+docker pull mcr.microsoft.com/dotnet/sdk:5.0
+
+docker pull mcr.microsoft.com/dotnet/sdk:3.1
+
+docker pull mcr.microsoft.com/dotnet/sdk:6.0
+
+ejecutar esto
+docker build -t dotnetcoreapp .
+docker images
+docker run -d -p 5024:5024 -name webapp dotnetcoreapp
